@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-tour-of-heroes';
-  content = 'this is a string interpolation'
+  content = 'this is a string interpolation';
+  isHide = true;
+  toggleText() {
+    this.isHide = !this.isHide;
+  }
 }

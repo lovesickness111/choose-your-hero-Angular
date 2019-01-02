@@ -1,0 +1,14 @@
+<!--khi click vào li hàm sự kiện onSelectHero chạy và trả dữ liệu về heroComponent => gọi đến 
+HeroDetailComponent => prop hero được truyền tới đấy
+-->
+<!--if exist property hero pass through heroDetailComponent-->
+<div *ngIf="hero">
+  <h2>{{hero.name|uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name">
+      <!--two-way binding syntax. Require import FormModule from '@angular/forms'-->
+    </label>
+  </div>
+</div>
