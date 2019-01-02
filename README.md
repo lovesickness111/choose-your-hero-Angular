@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AngularTourOfHeroes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# choose-your-hero-Angular
+demo angular 7
+>>>>>>> d3158219ce7434bea014c3d5ad3d52918e910faa
