@@ -5,10 +5,11 @@ HeroDetailComponent => prop hero được truyền tới đấy
 <div *ngIf="hero">
   <h2>{{hero.name|uppercase}} Details</h2>
   <div><span>id: </span>{{hero.id}}</div>
-  <div>
-    <label>name:
+  <div class="d-flex flex-row justify-center">
+    <label>name: &nbsp;</label>
       <input [(ngModel)]="hero.name" placeholder="name">
       <!--two-way binding syntax. Require import FormModule from '@angular/forms'-->
-    </label>
+    
   </div>
 </div>
+<button (click)="goBack()">go back</button>

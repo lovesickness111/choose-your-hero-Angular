@@ -5,15 +5,16 @@ component heroDetail có nhãn là hero , nhãn có giá trị bằng giá trị
 ====>đây là các pass dữ liệu qua các component :từ component to->nhỏ =->@input
 --> 
 
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+
 <!-- hiện danh sách heroes -->
 <h2>My Heroes</h2>
 <ul class="heroes">
   <!-- lặp qua các li  . *ngFor="let _element of _array"-->
-  <li *ngFor="let hero of heroes"
-  [class.selected]="hero===selectedHero"
-   (click)="onSelectHero(hero)">
+  <li *ngFor="let hero of heroes">
+    <a class="hero-item" routerLink="/detail/{{hero.id}}">
     <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+
   </li>
   <!--in order to add a class to html element, we use class binding-->
   <!--để add 1 attribute cho 1 element [_attribute._name]="_condition"-->

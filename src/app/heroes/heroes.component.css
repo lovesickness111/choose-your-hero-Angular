@@ -40,10 +40,16 @@
     background-color: #607D8B;
     line-height: 1em;
     position: relative;
-    left: -1px;
+    float: left;
     top: -4px;
     height: 3em;
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
-  
+  .hero-item{
+    width: 225px;
+    height: 30px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+  }

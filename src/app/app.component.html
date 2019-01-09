@@ -5,9 +5,15 @@
     <br/> <div [hidden]="isHide">template: {{content}}</div>
   </h1>
   <div><button (click)="toggleText()">Take a look</button></div>
-  <app-heroes>
-    <!--khi component này được khởi tạo=> hàm ngOnInit() chạy=> hàm getHeroes() chạy=> hàm add() chạy
-    =>instance messageService có giá trị của prop messages => messageComponet chạy và in ra messages-->
-  </app-heroes>
+  <!-- phần router-outlet giữ chỗ cho component heroes, nó là 1 router directive 
+  chỉ module nào import _nameRoutingModule thì component trực tiếp của module đó mới dùng được
+  -->
+  <nav class="d-flex flex-row justify-center">
+    <a routerLink="/heroes">LIST HEROES</a>
+    <div>&nbsp;</div>
+    <a routerLink="/dashboard">DASHBOARD</a>
+  </nav>
+  
+  <router-outlet></router-outlet>
 <!--phần hiển thị thông báo, các thông báo được định nghĩa ở messagesComponent-->
 <app-messages></app-messages>

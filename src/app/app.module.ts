@@ -8,7 +8,8 @@ import { HeroesComponent } from './heroes/heroes.component';
 //import formModule de sung dung two way binding trong html
 import {FormsModule} from '@angular/forms';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { MessagesComponent } from './messages/messages.component'
+import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component'
 //ngModule giup config injector và compiler và giúp tạo liên kết các thành phần trong project
 //@ biểu thị 1 decorator
 @NgModule({
@@ -18,6 +19,7 @@ import { MessagesComponent } from './messages/messages.component'
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
+    DashboardComponent,
   ],
   //khai báo các module cần import cũng có thể cung cấp service cho ứ dụng
   imports: [
