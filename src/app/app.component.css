@@ -4,6 +4,12 @@ h1{
 app-heroes {
     text-align: left;   
 }
+.classOne{
+  color:#fff;
+}
+.classTwo{
+  background: #0072bc;
+}
 .d-flex{
     display: flex !important;
 }

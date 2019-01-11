@@ -2,9 +2,15 @@
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
-    <br/> <div [hidden]="isHide">template: {{content}}</div>
+    <br/> <div [hidden]="isHide"
+     [ngClass]="{classOne:cone,classTwo:ctwo}"
+     [ngStyle]="{'font-style':style,'font-size':size}"
+     >template: {{content}}</div>
   </h1>
-  <div><button (click)="toggleText()">Take a look</button></div>
+  <br>
+  <div><button (click)="toggleText()">Take a look</button></div><br>
+  <div [hidden]="isHide"><button (click)="toggleStyle()">Click here to change style</button></div>
+
   <!-- phần router-outlet giữ chỗ cho component heroes, nó là 1 router directive 
   chỉ module nào import _nameRoutingModule thì component trực tiếp của module đó mới dùng được
   -->
