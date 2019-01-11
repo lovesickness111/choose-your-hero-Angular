@@ -1,3 +1,5 @@
+Hướng dẫn clone: tạo thư mục chứa repository> git clone [link] > npm install 
+
 <<<<<<< HEAD
 # AngularTourOfHeroes
 
