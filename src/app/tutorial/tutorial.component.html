@@ -1,0 +1,10 @@
+<!--prop name không hề có trong component con, nó là @input truyền từ thằng cha-->
+<p>This is hero from parent component: {{name}}</p>
+<!--voted là 1 prop mặc định là false-->
+<button [disabled]="voted" (click)="vote(true)">Agree</button>
+&nbsp;
+<button [disabled]="voted" (click)="vote(false)">DisAgree</button>
+<!--kiểm tra đã vote chưa, mỗi lần voted kết quả sẽ được thay đổi ở component cha-->
+&nbsp;
+
+<b>Result: {{voted}}</b>

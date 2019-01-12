@@ -9,7 +9,8 @@ import { HeroesComponent } from './heroes/heroes.component';
 import {FormsModule} from '@angular/forms';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
-import { DashboardComponent } from './dashboard/dashboard.component'
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TutorialComponent } from './tutorial/tutorial.component'
 //ngModule giup config injector và compiler và giúp tạo liên kết các thành phần trong project
 //@ biểu thị 1 decorator
 @NgModule({
@@ -20,6 +21,7 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
+    TutorialComponent,
   ],
   //khai báo các module cần import cũng có thể cung cấp service cho ứ dụng
   imports: [

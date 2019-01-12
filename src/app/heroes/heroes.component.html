@@ -3,20 +3,31 @@
 được lấy giá trị là từ hero selected-> cần pass 1 đối tượng => sử dụng @input trong decorator của 
 component heroDetail có nhãn là hero , nhãn có giá trị bằng giá trị selectedHero 
 ====>đây là các pass dữ liệu qua các component :từ component to->nhỏ =->@input
---> 
+-->
 
 
 <!-- hiện danh sách heroes -->
-<h2>My Heroes</h2>
-<ul class="heroes">
-  <!-- lặp qua các li  . *ngFor="let _element of _array"-->
-  <li *ngFor="let hero of heroes">
-    <a class="hero-item" routerLink="/detail/{{hero.id}}">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
-    </a>
+<h2 (click)="setNameHero()">test viewChild</h2>
 
-  </li>
-  <!--in order to add a class to html element, we use class binding-->
-  <!--để add 1 attribute cho 1 element [_attribute._name]="_condition"-->
-  <!--để add sự kiện trực tiếp trên elenment: (_event)="_function(_para)"-->
-</ul>
+<h2>Agree: {{agree}} And Disagree:{{disagree}}</h2>
+<div style="display: flex; justify-content: center;
+align-items: center;">
+  <div style="display: flex; flex-grow: 1">
+    <ul class="heroes">
+      <!-- lặp qua các li  . *ngFor="let _element of _array"-->
+      <li *ngFor="let hero of heroes">
+        <a class="hero-item" routerLink="/detail/{{hero.id}}">
+          <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </a>
+
+      </li>
+      <!--in order to add a class to html element, we use class binding-->
+      <!--để add 1 attribute cho 1 element [_attribute._name]="_condition"-->
+      <!--để add sự kiện trực tiếp trên elenment: (_event)="_function(_para)"-->
+    </ul>
+  </div>
+  <div style=" display: flex; flex-direction: column; justify-content: center; flex-grow: 1;flex-basis: 400px">
+    <app-tutorial *ngFor="let hero of heroes" [name]="hero.name" (onVote)="parentVote($event)"></app-tutorial>
+  </div>
+  <div style="display: flex;  flex-grow: 3"></div>
+</div>
